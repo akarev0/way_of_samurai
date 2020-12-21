@@ -4,21 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-let categories = [
-    { id: 1, title: "Clothes"},
-    { id: 1, title: "Footwear"},
-    { id: 1, title: "Footwear"},
-]
-
-let products = [
-    { id: 1, title: "First product"},
-    { id: 1, title: "Second product"},
-    { id: 1, title: "Third product"},
-]
+import state from './redux/state'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App categories={categories} products={products} />
+    <App categories={state.categories} products={state.products} />
   </React.StrictMode>,
   document.getElementById('root')
 );

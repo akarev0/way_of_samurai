@@ -1,5 +1,8 @@
-
 .product {
-    background-color: green;
-    text-align: center;
+  background-color: green;
+  text-align: center;
+}
+
+.product .img {
+  width: 100px;
 }
