@@ -1,12 +1,13 @@
 import s from './Product.module.css'
+import {NavLink} from "react-router-dom";
 
 const Product = (props) => {
 
     return (
         <div className={s.product}>
-            <img className={s.img} src={props.image} />
+            <img className={s.img} src={props.state.image} alt="image" />
                 <div>
-                    <a href="#">{props.title}</a>
+                    <NavLink to="#">{props.state.title}</NavLink>
                 </div>
         </div>
     )
