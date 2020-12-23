@@ -2,21 +2,19 @@ import './App.css';
 import Header from "./components/Header/Header.js";
 import {BrowserRouter, Route} from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar.js";
-import Product from "./components/Board/Products/Product/Product";
+import Board from "./components/Board/Board";
 
 function App(props) {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
-                <Sidebar categories={props.categories}/>
+                <Sidebar/>
                 <div>
-                    <Route path="/clothes" render={() => <Product state={props.state.categories.clothes}/>}/>
-                    <Route path="/footwear" render={() => <Product state={props.state.categories.footwear}/>}/>
-                    <Route path="/accessory" render={() => <Product state={props.state.categories.accessory}/>}/>
+                    <Route path="/clothes" render={() => <Board state={props.state.clothesPage}/>}/>
+                    <Route path="/footwear" render={() => <Board state={props.state.footwearPage}/>}/>
+                    <Route path="/accessory" render={() => <Board state={props.state.accessoryPage}/>}/>
                 </div>
-
-                {/*<Board products={props.products}/>*/}
             </div>
         </BrowserRouter>
     );

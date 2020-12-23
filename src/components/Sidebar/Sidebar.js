@@ -1,15 +1,10 @@
 import s from './Sidebar.module.css';
 import {NavLink} from 'react-router-dom';
 
-const Sidebar = (props) => {
-
-    // let categoriesList = props.categories.map(cat => <Category categoryName={cat.title}/>)
+const Sidebar = () => {
 
     return (
         <div className={s.sidebar}>
-            {/*<nav className={s.sidebar}>*/}
-            {/*    {categoriesList}*/}
-            {/*</nav>*/}
             <div>
                 <NavLink to="/clothes">Clothes</NavLink>
             </div>
@@ -19,8 +14,6 @@ const Sidebar = (props) => {
             <div>
                 <NavLink to="/accessory">Accessory</NavLink>
             </div>
-
-
         </div>
 
 

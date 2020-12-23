@@ -5,9 +5,9 @@ const Product = (props) => {
 
     return (
         <div className={s.product}>
-            <img className={s.img} src={props.state.image} alt="image" />
+            <img className={s.img} src={props.image} alt="image" />
                 <div>
-                    <NavLink to="#">{props.state.title}</NavLink>
+                    <NavLink to="#">{props.title}</NavLink>
                 </div>
         </div>
     )

@@ -4,7 +4,7 @@ import styles from './Board.module.css'
 
 const Board = (props) => {
 
-    let productsList = props.products.map(prod => <Product title={prod.title} image={prod.image}/>)
+    let productsList = props.state.products.map(prod => <Product title={prod.title} image={prod.image}/>)
 
     return (
         <div className={styles.board}>
